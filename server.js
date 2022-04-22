@@ -40,6 +40,8 @@ const express = require('express')
 
 const app = express()
 
+//body parser
+app.use(express.json())
 
 let notes = [
     {
@@ -103,7 +105,6 @@ app.delete('/api/notes/:id', (req, res) =>{
 
 app.post('/api/notes', (req, res) =>{
   const note = req.body
-  
   console.log(note)
 
   res.json(note)
