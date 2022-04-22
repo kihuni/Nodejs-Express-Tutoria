@@ -68,6 +68,8 @@ let notes = [
 //   res.send('my first server using express')
 // })
 
+//route that handles get request
+
 app.get('/api/notes/:id', (req, res)=>{
 
 //  // testing every step of the route process using console.log
@@ -95,6 +97,8 @@ if(note){
 }
 })
 
+// route for handling delete request
+
 app.delete('/api/notes/:id', (req, res) =>{
   const id = Number(req.params.id)
 
@@ -103,6 +107,8 @@ app.delete('/api/notes/:id', (req, res) =>{
   res.status(204).end()
 })
 
+
+//route for handling post request
 app.post('/api/notes', (req, res) =>{
   const note = req.body
   console.log(note)
