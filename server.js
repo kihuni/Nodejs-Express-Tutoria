@@ -64,9 +64,9 @@ let notes = [
     }
   ]
 
-// app.get('/', (req,res)=>{
-//   res.send('my first server using express')
-// })
+app.get('/', (req,res)=>{
+  res.json(notes)
+})
 
 //route that handles get request
 
@@ -95,6 +95,7 @@ if(note){
 }else{
   res.status(404).end()
 }
+
 })
 
 // route for handling delete request
